@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mapping Inequality</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+    integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+    crossorigin=""/>
+    <link rel="stylesheet" href="./Leaflet.markercluster-1.0.5/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+    crossorigin=""></script>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="../js/d3pie.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="../js/jquery-csv.js"></script>
+
+
+    <script src="./Leaflet-1.0.3/leaflet.js"></script>
+    <script src="jquery-2.1.1.min.js"></script>
+    <script src="./Leaflet.markercluster-1.0.5/leaflet.markercluster.js"></script>
+
+    <script src="../js/search.js"></script>
+    <script type="" src="../js/states.js"></script>
+    <script type="" src="../js/city.js"></script>
+    <script type="" src="../js/location.js"></script>
+
+</head>
+
+<script type="" src="../js/parse-data.js"></script>
+<!-- <script>
+function apiCallback(apiCall){
+    var pie = "hello";
+
+    document.getElementById('pieChart').innerHTML = pie;
+}
+</script> -->
+
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <p>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="myInput" onkeyup="search()" onclick="showList()" placeholder="Search for cities..">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <!-- <button onclick="showData()"></button> -->
+                <div id="mapid">
+                    <script type="text/javascript" src="../js/map-layers.js"></script>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <script type="" src="../js/city-list.js"></script>
+                <ul id="myUL" onclick="hideList()">
+                    <script type="text/javascript">
+                        makeUL();
+                    </script>
+                </ul>
+                <!-- AAMIR AND ALEX PUT UR STUFF IN THIS DIV HERE! > -->
+
+                <div id="data" style="display: none;">
+                    <div id="pieChart">
+                        <script src="../js/parse-data.js"></script>
+
+                    </div>
+
+                </div>
+
+                <!--  woohoo  -->
+
+            </div>
+            <!-- <div class="col-md-4" >
+                <!-- <button onclick="hideList()"></button> -->
+                <!-- <script type="" src="../js/city-list.js"></script>
+                <ul id="myUL">
+                    <script type="text/javascript">
+                        makeUL();
+                    </script>
+                </ul>
+            </div>  -->
+        </div>
+        <div class="row">
+            <!-- <p id="demo"></p> -->
+
+
+        </div>
+     </div>
+</body>
+
+
+</html>
